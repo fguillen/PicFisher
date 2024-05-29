@@ -1,5 +1,3 @@
-# Write test for the class @Picfisher::Sanitizer
-
 require "test_helper"
 
 class Picfisher::TestSanitizer < Minitest::Test
