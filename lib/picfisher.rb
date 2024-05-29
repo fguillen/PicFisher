@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "picfisher/version"
+require_relative "picfisher/sanitizer"
 
 module Picfisher
   class Error < StandardError; end
