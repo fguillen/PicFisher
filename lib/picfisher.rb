@@ -2,6 +2,7 @@
 
 require_relative "picfisher/version"
 require_relative "picfisher/sanitizer"
+require_relative "picfisher/url_extractor"
 
 module Picfisher
   class Error < StandardError; end

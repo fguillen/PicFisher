@@ -17,21 +17,27 @@ class TestPicfisher < Minitest::Test
 
       Picfisher.fish(images_file_path, output_directory_path)
 
-      assert(File.exist?("#{output_directory_path}/https_example_com_image1.jpg"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image2.png"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image3.gif"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image4.jpg"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image5.png"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image6.gif"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image7.jpg"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image8.png"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image9.gif"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image10.jpg"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image11.png"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image12.jpg"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image13.gif"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image14.png"))
-      assert(File.exist?("#{output_directory_path}/https_example_com_image15.jpg"))
+      expected_files = [
+        "https_example_com_image1.jpg",
+        "https_example_com_image2.png",
+        "https_example_com_image3.gif",
+        "https_example_com_image4.jpg",
+        "https_example_com_image5.png",
+        "https_example_com_image6.gif",
+        "https_example_com_image7.jpg",
+        "https_example_com_image8.png",
+        "https_example_com_image9.gif",
+        "https_example_com_image10.jpg",
+        "https_example_com_image11.png",
+        "https_example_com_image12.jpg",
+        "https_example_com_image13.gif",
+        "https_example_com_image14.png",
+        "https_example_com_image15.jpg",
+      ]
+
+      expected_files.each do |expected_file|
+        assert(File.exist?("#{output_directory_path}/#{expected_file}"), "Excepted to find file '#{expected_file}'")
+      end
     end
   end
 end

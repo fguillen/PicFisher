@@ -1,4 +1,8 @@
 https://example.com/image1.jpg
+https://example.com/image1.jpg                    # Duplicated
+https://example.com/other/image1.jpg              # No Duplicate
+https://example.com/other/Se%20parated.jpg        # Weird name
+
 https://example.com/image2.png https://example.com/image3.gif
 
 Here is another image link:
