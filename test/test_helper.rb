@@ -5,9 +5,10 @@ require "picfisher"
 
 require "minitest/autorun"
 require "webmock/minitest"
+require "mocha/minitest"
 
-module TestHelper
-  def fixture
-    return "#{__dir__}/fixtures"
+module TestHelpers
+  def fixture(texture_path)
+    return "#{__dir__}/fixtures/#{texture_path}"
   end
 end

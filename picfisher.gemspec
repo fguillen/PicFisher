@@ -4,7 +4,7 @@ require_relative "lib/picfisher/version"
 
 Gem::Specification.new do |spec|
   spec.name = "picfisher"
-  spec.version = Picfisher::VERSION
+  spec.version = PicFisher::VERSION
   spec.authors = ["Fernando Guillen"]
   spec.email = ["fguillen.mail@gmail.com"]
 
@@ -37,6 +37,7 @@ Gem::Specification.new do |spec|
   # spec.add_dependency "example-gem", "~> 1.0"
 
   spec.add_development_dependency "webmock", "~> 3.23", ">= 3.23.1"
+  spec.add_development_dependency "mocha", "~> 2.3"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

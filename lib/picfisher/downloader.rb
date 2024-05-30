@@ -1,9 +1,11 @@
 require "open-uri"
 
-module Picfisher
+module PicFisher
   module Downloader
     # TODO: We need to add error handling here
-    def self.run(url, output_path)
+    def self.download(url, output_path)
+      PicFisher::Log.debug("Downloading #{url} to #{output_path}")
+
       io_stream = OpenURI::open_uri(url)
 
       File.open(output_path, "wb") do |f|

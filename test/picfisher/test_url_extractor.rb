@@ -1,9 +1,11 @@
 require "test_helper"
 
 class PicFisher::TestURLExtractor < Minitest::Test
+  include TestHelpers
+
   def test_run
-    string = File.read("#{__dir__}/../fixtures/images.txt")
-    result = PicFisher::URLExtractor.run(string)
+    string = File.read(fixture("images.txt"))
+    result = PicFisher::URLExtractor.extract(string)
 
     assert_equal(17, result.count)
 

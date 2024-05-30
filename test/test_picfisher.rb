@@ -2,20 +2,20 @@
 
 require "test_helper"
 
-class TestPicfisher < Minitest::Test
+class TestPicFisher < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::Picfisher::VERSION
+    refute_nil ::PicFisher::VERSION
   end
 
   def test_api_entry_point_exists
-    assert ::Picfisher.respond_to?(:fish)
+    assert ::PicFisher.respond_to?(:fish)
   end
 
   def test_calling_run_download_all_the_files
     Dir.mktmpdir do |output_directory_path|
       images_file_path = "#{__dir__}/fixtures/images.txt"
 
-      Picfisher.fish(images_file_path, output_directory_path)
+      PicFisher.fish(images_file_path, output_directory_path)
 
       expected_files = [
         "https_example_com_image1.jpg",

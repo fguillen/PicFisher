@@ -1,4 +1,4 @@
-# Picfisher
+# PicFisher
 
 TODO: Delete this and the text below, and describe your gem
 
@@ -38,3 +38,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Attributions
 
 - Image fixture: Joghurt; SVG conversion by De.Nobelium; code cleanup by Jahoe, Public domain, via Wikimedia Commons
+- Rainbow: Image by Freeimages.com
