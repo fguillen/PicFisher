@@ -2,7 +2,6 @@ require "open-uri"
 
 module PicFisher
   module Downloader
-    # TODO: We need to add error handling here
     def self.download(url, output_path)
       PicFisher::Log.debug("Fishing #{url} to #{output_path}")
 
