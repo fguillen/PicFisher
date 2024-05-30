@@ -6,7 +6,7 @@ module PicFisher
       result =
         url
           .sub(/#{filename_extension_escaped}$/, "")
-          .gsub(/[^\w\s_-]+/, "_")
+          .gsub(/[^\w\s-]+/, "_")
           .gsub(/(^|\b\s)\s+($|\s?\b)/, "\\1\\2")
           .gsub(/\s+/, "_")
 

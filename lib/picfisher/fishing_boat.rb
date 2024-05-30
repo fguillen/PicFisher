@@ -8,7 +8,12 @@ module PicFisher
       urls = PicFisher::URLExtractor.extract(file_to_string)
       urls.each do |url|
         sanitized_url = PicFisher::Sanitizer.sanitize_image_url(url)
-        PicFisher::Downloader.download(url, "#{output_directory_path}/#{sanitized_url}")
+
+        begin
+          PicFisher::Downloader.download(url, "#{output_directory_path}/#{sanitized_url}")
+        rescue PicFisher::Error
+          PicFisher::Log.error("Failed to fish #{url}. Skipping...")
+        end
       end
     end
   end

@@ -21,4 +21,15 @@ class PicFisher::TestDownloader < Minitest::Test
       assert_equal(hash_original, hash_downloaded)
     end
   end
+
+  def test_download_invalid_url_should_raise_error
+    image_url = "https://example.com/not_existing.png"
+
+    stub_request(:get, "https://example.com/not_existing.png").
+      to_return(status: 404, body: "Error")
+
+    assert_raises(PicFisher::Error) do
+      PicFisher::Downloader.download(image_url, "OUTPUT_PATH")
+    end
+  end
 end
