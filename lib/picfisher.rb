@@ -13,6 +13,8 @@ module PicFisher
 
   # REVIEW: we could use keyword params if we see it adds readability
   def self.fish(images_file_path, output_directory_path)
-    puts "PicFisher is running..."
+    PicFisher::Log.info "PicFisher is running..."
+    PicFisher::FishingBoat.fish(images_file_path, output_directory_path)
+    PicFisher::Log.info "PicFisher is finished!"
   end
 end
