@@ -31,12 +31,13 @@ Gem::Specification.new do |spec|
   spec.executables << "picfisher"
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "open-uri", "~> 0.4.1"
-  spec.add_dependency "uri", "~> 0.13.0"
-  spec.add_dependency "rake", "~> 13.0"
   spec.add_dependency "minitest", "~> 5.16"
+  spec.add_dependency "open-uri", "~> 0.4.1"
+  spec.add_dependency "rake", "~> 13.0"
   spec.add_dependency "rubocop", "~> 1.21"
+  spec.add_dependency "uri", "~> 0.13.0"
 
-  spec.add_development_dependency "webmock", "~> 3.23", ">= 3.23.1"
   spec.add_development_dependency "mocha", "~> 2.3"
+  spec.add_development_dependency "webmock", "~> 3.23", ">= 3.23.1"
+  spec.metadata["rubygems_mfa_required"] = "true"
 end

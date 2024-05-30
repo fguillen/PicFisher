@@ -1,6 +1,15 @@
+# frozen_string_literal: true
+
 module PicFisher
+  # Extracts the image urls from the given file and download them to the given directory
   module FishingBoat
-    # REVIEW: we could use keyword params if we see it adds readability
+    # Extracts the image urls from the given file and download them to the given directory
+    # @param images_file_path [String]
+    # @param output_directory_path [String]
+    # @return [nil]
+    # @raise [PicFisher::Error]
+    # @example
+    #   PicFisher::FishingBoat.fish("images.txt","~/Downloads/fished_images")
     def self.fish(images_file_path, output_directory_path)
       PicFisher::Log.info("Fishing from #{images_file_path} to #{output_directory_path}")
 

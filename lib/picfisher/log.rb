@@ -1,24 +1,25 @@
+# frozen_string_literal: true
+
 module PicFisher
+  # Print a message to the console
+  # @param debug_level [Symbol]
+  # @return [nil]
+  # @example
+  #   PicFisher::Log.debug("message")
+  #   PicFisher::Log.info("message")
+  #   PicFisher::Log.error("message")
   module Log
     def self.debug(message)
-      if ["debug"].include? debug_level
-        output(:debug, message)
-      end
+      output(:debug, message) if ["debug"].include? debug_level
     end
 
     def self.info(message)
-      if ["debug", "info"].include? debug_level
-        output(:info, message)
-      end
+      output(:info, message) if %w[debug info].include? debug_level
     end
 
     def self.error(message)
-      if ["debug", "info", "error"].include? debug_level
-        output(:error, message)
-      end
+      output(:error, message) if %w[debug info error].include? debug_level
     end
-
-    private
 
     def self.output(level, message)
       final_message = "PicFisher [#{level.upcase}] #{message}"
@@ -28,5 +29,7 @@ module PicFisher
     def self.debug_level
       ENV["DEBUG_LEVEL"] || "info" # default is info
     end
+
+    private_class_method :debug_level
   end
 end

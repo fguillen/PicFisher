@@ -12,7 +12,7 @@ gem install picfisher
 ## Usage
 
 ```
-picfisher [images_file_path] [output_directory_path]
+picfisher <images_file_path> <output_directory_path>
 ```
 
 For example:

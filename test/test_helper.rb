@@ -11,6 +11,6 @@ ENV["DEBUG_LEVEL"] = "silence"
 
 module TestHelpers
   def fixture(texture_path)
-    return "#{__dir__}/fixtures/#{texture_path}"
+    "#{__dir__}/fixtures/#{texture_path}"
   end
 end
