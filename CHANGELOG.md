@@ -7,11 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.1] - 2024-05-30
 
+### Fixed
+
+- Removed development gems from production dependencies
+
+
+## [0.2.1] - 2024-05-30
+
 ### Added
+
+- Show running version in the first log message
+
+### Changed
 
 - Rubocop cops application
 - Update TODO.md
-- Show running version in the first log message
 
 ### Fixed
 
