@@ -12,7 +12,7 @@ module PicFisher
 
   # REVIEW: we could use keyword params if we see it adds readability
   def self.fish(images_file_path, output_directory_path)
-    PicFisher::Log.info "PicFisher is running..."
+    PicFisher::Log.info "PicFisher [#{PicFisher::VERSION}] is running..."
 
     if images_file_path.nil? || output_directory_path.nil?
       message = "Use: picfisher [images_file_path] [output_directory_path]"
