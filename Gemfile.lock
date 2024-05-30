@@ -4,8 +4,6 @@ PATH
     picfisher (0.2.1)
       minitest (~> 5.16)
       open-uri (~> 0.4.1)
-      rake (~> 13.0)
-      rubocop (~> 1.21)
       uri (~> 0.13.0)
 
 GEM
@@ -67,6 +65,8 @@ PLATFORMS
 DEPENDENCIES
   mocha (~> 2.3)
   picfisher!
+  rake (~> 13.0)
+  rubocop (~> 1.21)
   webmock (~> 3.23, >= 3.23.1)
 
 BUNDLED WITH
