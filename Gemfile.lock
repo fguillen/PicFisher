@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    picfisher (0.2.0)
+    picfisher (0.2.1)
       minitest (~> 5.16)
       open-uri (~> 0.4.1)
       rake (~> 13.0)
