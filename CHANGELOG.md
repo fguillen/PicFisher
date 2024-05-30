@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Main features implemented
-- README.md updated
+- Debug Level is 'info' by default
+- Error handling when image URL is not valid
 
 
 ## [0.1.0] - 2024-05-30
