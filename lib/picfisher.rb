@@ -27,7 +27,7 @@ module PicFisher
     end
 
     if !Dir.exist?(output_directory_path)
-      message = "Directory not found: #{images_file_path}"
+      message = "Directory not found: #{output_directory_path}"
       PicFisher::Log.error(message)
       raise PicFisher::Error.new(message)
     end

@@ -28,7 +28,7 @@ With log
 DEBUG_LEVEL=debug picfisher images.txt ~/Downloads/fished_images
 ```
 
-Accepted values for `DEBUG_LEVEL`: `debug`, `info`, `error`.
+Accepted values for `DEBUG_LEVEL`: `debug`, `info`, `error`, `silence`.
 
 ## Development
 

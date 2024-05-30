@@ -34,4 +34,16 @@ class PicFisher::TestLog < Minitest::Test
       end
     end
   end
+
+  def test_default_debug_level_should_be_info
+    ENV.delete("DEBUG_LEVEL")
+
+    Kernel.expects(:puts).with("PicFisher [DEBUG] message").never
+    Kernel.expects(:puts).with("PicFisher [INFO] message")
+    Kernel.expects(:puts).with("PicFisher [ERROR] message")
+
+    PicFisher::Log.debug("message")
+    PicFisher::Log.info("message")
+    PicFisher::Log.error("message")
+  end
 end

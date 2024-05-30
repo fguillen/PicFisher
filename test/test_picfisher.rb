@@ -34,13 +34,14 @@ class TestPicFisher < Minitest::Test
       { url: "https://example.com/image14.png", output_file_name: "https_example_com_image14.png" },
       { url: "https://example.com/image15.jpg", output_file_name: "https_example_com_image15.jpg" },
     ]
-    output_directory_path = "/tmp/output"
 
-    images.each do |image|
-      PicFisher::Downloader.expects(:download).with(image[:url], "#{output_directory_path}/#{image[:output_file_name]}")
+    Dir.mktmpdir do |output_directory_path| # Not used, but it should exist to overpass the validations
+      images.each do |image|
+        PicFisher::Downloader.expects(:download).with(image[:url], "#{output_directory_path}/#{image[:output_file_name]}")
+      end
+
+      PicFisher.fish(images_file_path, output_directory_path)
     end
-
-    PicFisher.fish(images_file_path, output_directory_path)
   end
 
   def test_fish_integration_mode
